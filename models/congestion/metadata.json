@@ -1,0 +1,53 @@
+{
+  "training_date": "2026-09-10T04:09:13.414125+00:00",
+  "dataset_version": "v2.0",
+  "model_name": "xgboost_quantile_congestion",
+  "model_version": "1.0.0",
+  "ports_trained": [
+    "AUS_HAY",
+    "AUS_NEW",
+    "IDN_TAB",
+    "IND_DHM",
+    "IND_GOP",
+    "IND_GVM",
+    "IND_HLD",
+    "IND_PAR",
+    "IND_VZG",
+    "ZAF_RIC"
+  ],
+  "features": [
+    "vessels_waiting",
+    "berth_occupancy_pct",
+    "congestion_index",
+    "rolling_mean_7",
+    "rolling_mean_14",
+    "rolling_mean_30",
+    "rolling_vw_mean_7",
+    "rolling_vw_mean_14",
+    "rolling_vw_mean_30",
+    "month",
+    "weekday",
+    "is_weekend",
+    "is_monsoon",
+    "is_cyclone_season",
+    "wind_speed_kmh",
+    "wave_height_m",
+    "rainfall_mm",
+    "storm_indicator",
+    "berth_count",
+    "cargo_handling_rate_mt_day",
+    "max_draft_m",
+    "cargo_handling_requirement_days"
+  ],
+  "metrics": {
+    "MAE": 0.043,
+    "RMSE": 0.064,
+    "MAPE": 1.66,
+    "folds": 4
+  },
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ]
+}

@@ -1,0 +1,7 @@
+date,event_type,affected_region,severity,description,source
+# SYNTHETIC_DEMO: Sample disruption events for development and testing.
+2026-01-01,Weather,South China Sea,moderate,Tropical depression forming causing localized route deviations,SYNTHETIC_DEMO
+2026-01-03,Geopolitical,Red Sea / Bab el Mandeb,high,Heightened security advisories on Bab el Mandeb transit,SYNTHETIC_DEMO
+2026-01-05,Port_Operation,Newcastle Coal Terminal,high,Scheduled 48-hour rail maintenance impacting coal discharge,SYNTHETIC_DEMO
+2026-01-10,Chokepoint,Malacca Strait,low,Routine naval patrol exercises near Singapore anchorage,SYNTHETIC_DEMO
+2026-01-15,Weather,Bay of Bengal,moderate,Seasonal depression moving northwest towards Odisha coast,SYNTHETIC_DEMO

@@ -1,0 +1,64 @@
+# =============================================================================
+# Charter-AI — Docker Compose
+# =============================================================================
+# Usage:
+#   docker compose up -d          # start all services
+#   docker compose up backend     # start backend + postgres only
+#   docker compose logs -f        # follow logs
+
+services:
+  # ---------- PostgreSQL + PostGIS ----------
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: charter-ai-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-charter_ai}
+      POSTGRES_USER: ${POSTGRES_USER:-charter_ai}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme_in_production}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-charter_ai}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ---------- FastAPI Backend ----------
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: charter-ai-backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      POSTGRES_HOST: postgres
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./trained_models:/app/trained_models
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # ---------- React Frontend ----------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: charter-ai-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_BASE_URL: http://localhost:${API_PORT:-8000}/api
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

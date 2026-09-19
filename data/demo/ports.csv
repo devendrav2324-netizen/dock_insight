@@ -1,0 +1,16 @@
+port_id,port_name,country,latitude,longitude,max_draft_m,max_loa_m,max_beam_m,cargo_handling_rate_mt_day,berth_count,coal_terminal,iron_ore_terminal,grain_terminal,tidal_restriction,night_navigation_restriction,source,source_date,confidence_level
+# SYNTHETIC_DEMO: Sample data for development and testing. Do not use for production navigation.
+IND_VZG,Visakhapatnam,IND,17.6868,83.2185,18.1,280.0,45.0,45000.0,12,True,True,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+IND_GVM,Gangavaram,IND,17.6167,83.2333,21.0,300.0,50.0,55000.0,6,True,True,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+IND_PAR,Paradip,IND,20.2644,86.6715,16.5,260.0,43.0,40000.0,10,True,True,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+IND_DHM,Dhamra,IND,20.8039,86.9744,18.0,290.0,48.0,50000.0,5,True,True,False,True,False,SYNTHETIC_DEMO,2026-01-01,LOW
+IND_HLD,Haldia,IND,22.0234,88.0645,8.5,200.0,31.0,20000.0,8,True,False,False,True,True,SYNTHETIC_DEMO,2026-01-01,LOW
+IND_GOP,Gopalpur,IND,19.3000,84.9667,12.5,225.0,32.5,25000.0,3,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+AUS_NEW,Newcastle,AUS,-32.9267,151.7789,15.2,300.0,50.0,80000.0,8,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+AUS_HAY,Hay Point,AUS,-21.2833,149.3000,19.0,350.0,55.0,90000.0,6,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+AUS_GLD,Gladstone,AUS,-23.8431,151.2589,16.0,300.0,50.0,75000.0,8,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+IDN_TAB,Tabang,IDN,-0.5000,116.0000,12.0,230.0,34.0,30000.0,4,True,False,False,True,True,SYNTHETIC_DEMO,2026-01-01,LOW
+IDN_BAL,Balikpapan,IDN,-1.2667,116.8333,13.5,240.0,36.0,35000.0,4,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+ZAF_RIC,Richards Bay,ZAF,-28.8000,32.0833,17.5,315.0,47.0,85000.0,7,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+USA_HAM,Hampton Roads,USA,36.9500,-76.3333,15.2,300.0,50.0,60000.0,5,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW
+RUS_VOS,Vostochny,RUS,42.7333,133.0833,16.5,300.0,50.0,50000.0,4,True,False,False,False,False,SYNTHETIC_DEMO,2026-01-01,LOW

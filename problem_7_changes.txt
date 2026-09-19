@@ -1,0 +1,87 @@
+================================================================================
+CHARTERAI - PROBLEM 7 SUMMARY OF CHANGES
+Model Persistence, Versioning & Reproducible Inference
+================================================================================
+
+1. OVERVIEW OF PROBLEM 7 IMPLEMENTATION
+--------------------------------------------------------------------------------
+Problem 7 addressed model persistence, registry versioning, metadata tracking,
+identity validation, and the strict decoupling of training from inference.
+All historical stub methods throwing NotImplementedError were replaced with
+production-grade implementations, and zero regressions were introduced into
+Problems 1-6A.
+
+
+2. MODIFIED AND NEW FILES
+--------------------------------------------------------------------------------
+
+[MODIFIED] src/models/registry.py
+- Replaced stub functions with a full ModelRegistry implementation.
+- Added custom typed exception hierarchy:
+    * ModelRegistryError (base class)
+    * ModelNotFoundError (raised when model.pkl or metadata.json is missing)
+    * ModelMismatchError (raised when route/vessel_class/cargo_type identity mismatches)
+    * ModelIntegrityError (raised when artifact is corrupted or cannot be deserialized)
+- Implemented ModelRegistry methods:
+    * save_model(): Serializes trained model objects or state dicts to model.pkl,
+      creates metadata.json, and registers model versions.
+    * load_model(): Deserializes model.pkl, validates identity metadata against
+      requested parameters, and returns the loaded model without retraining.
+    * get_active_version(): Resolves active or latest version for a route/model.
+    * set_active_version(): Marks a specific version as active in metadata.
+    * list_versions(): Lists available model versions and metadata summaries.
+    * _validate_identity(): Enforces strict match on route, vessel_class, cargo_type.
+    * _validate_artifact(): Validates binary integrity and deserialization.
+
+[MODIFIED] src/models/training.py
+- Replaced stub functions with a complete TrainingPipeline implementation.
+- Added dataclasses:
+    * TrainingConfig (specifies route, vessel_class, cargo_type, model_type, splits)
+    * TrainingResult (encapsulates trained model, metrics, metadata, artifact path)
+- Implemented _time_series_split():
+    * Performs expanding or rolling time-series out-of-sample validation splits.
+- Implemented TrainingPipeline.run():
+    * Prepares features and target series.
+    * Fits model on training window and evaluates on out-of-sample test splits.
+    * Computes real metrics: MAE, RMSE, MAPE, sMAPE, MASE.
+    * Persists model.pkl and metadata.json via ModelRegistry.
+
+[MODIFIED] src/models/freight_forecaster.py
+- Refactored model acquisition and prediction pathways.
+- FreightForecaster.get_trained_model():
+    * Now loads persisted model artifacts via ModelRegistry.
+    * Added allow_on_the_fly parameter (default False in strict mode).
+    * If allow_on_the_fly=False and artifact is missing, raises ModelNotFoundError.
+- FreightForecaster.predict_freight():
+    * Strictly separates inference from training.
+    * Loads pre-trained model artifact and executes .predict() without re-running .fit().
+    * Handles missing models by returning an explicit unavailable error dictionary
+      ({"success": False, "status": "MODEL_UNAVAILABLE", "error": ...}).
+
+[NEW] tests/test_model_persistence.py
+- Implemented 8 targeted unit & integration tests using isolated tmp_path fixtures:
+    1. test_reproducibility: Verifies identical predictions after reload.
+    2. test_missing_artifact_raises_error: Verifies ModelNotFoundError is raised when model.pkl is missing.
+    3. test_inference_does_not_retrain: Proves inference does NOT re-invoke fit().
+    4. test_model_registry_versioning: Tests version registration and active version lookup.
+    5. test_wrong_model_mismatch_raises_error: Verifies ModelMismatchError when loading wrong route/vessel model.
+    6. test_corrupt_artifact_raises_integrity_error: Verifies ModelIntegrityError on corrupted files.
+    7. test_training_pipeline_end_to_end: Verifies full end-to-end training and persistence pipeline.
+    8. test_test_artifact_isolation: Verifies test fixtures do not mutate production models/ directory.
+
+[NEW] docs/model_persistence.md
+- Created comprehensive architecture documentation covering:
+    * Model artifact directory structure
+    * Metadata schema specification
+    * Version selection and registry management
+    * Error handling protocol
+    * Synthetic/Demo transparency flags
+    * Separation of training vs. inference pathways
+
+
+3. VERIFICATION RESULTS
+--------------------------------------------------------------------------------
+- Targeted Model Persistence Tests: 8 passed / 8 total
+- Complete Pytest Suite: 199 passed / 199 total across 28 test files
+- Zero regressions across Problems 1-6A.
+================================================================================
