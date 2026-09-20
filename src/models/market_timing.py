@@ -1,5 +1,5 @@
 """
-Charter-AI — Market Timing Engine (Phase 7).
+DockInsights — Market Timing Engine (Phase 7).
 
 Recommends whether a dry-bulk charterer should:
 - BOOK_NOW

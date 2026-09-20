@@ -1,5 +1,5 @@
 """
-Charter-AI — Multi-Criteria Charter Scorer.
+DockInsights — Multi-Criteria Charter Scorer.
 
 Ranks chartering options (vessel class × timing × contract type) on
 a weighted multi-criteria basis.

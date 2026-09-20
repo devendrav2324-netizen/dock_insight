@@ -1,5 +1,5 @@
 """
-Charter-AI — Ensemble Freight Forecaster.
+DockInsights — Ensemble Freight Forecaster.
 
 Combines statistical baselines, ARIMA/SARIMA, and machine learning (XGBoost)
 into a unified, robust multi-model ensemble.

@@ -1,5 +1,5 @@
 """
-Charter-AI — Hard Constraint Engine (Phase 6).
+DockInsights — Hard Constraint Engine (Phase 6).
 
 Strictly evaluates hard physical and operational constraints to eliminate
 infeasible vessel and fleet charter plans before soft scoring and ranking.

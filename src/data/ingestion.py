@@ -1,5 +1,5 @@
 """
-Charter-AI — Data Ingestion Pipeline (V2).
+DockInsights — Data Ingestion Pipeline (V2).
 
 Loads CSV datasets into SQL database models. Designed to be idempotent.
 Uses normalized domain models and robust CSV parsing.

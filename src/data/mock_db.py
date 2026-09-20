@@ -1,5 +1,5 @@
 """
-Charter-AI — Mock Database (V2).
+DockInsights — Mock Database (V2).
 
 Realistic synthetic demo data used for SIH Demo Mode.
 All records are explicitly tagged source="SYNTHETIC_DEMO" with confidence_level="LOW".

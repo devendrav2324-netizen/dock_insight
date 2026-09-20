@@ -1,5 +1,5 @@
 """
-Charter-AI — Master Historical Backtesting Engine (Phase 11).
+DockInsights — Master Historical Backtesting Engine (Phase 11).
 
 Orchestrates full-scale, leak-free walk-forward historical evaluations:
 1. Walk-Forward Forecast Accuracy (Freight & Port Congestion)
@@ -75,7 +75,7 @@ class BacktestEngine:
         scenarios = generate_standard_scenarios(years=years)
 
         # 4. Execute Optimization & Strategy Simulation Replay
-        logger.info("Phase 11.C: Replaying %d fixtures across CharterAI and 5 Baselines...", len(scenarios))
+        logger.info("Phase 11.C: Replaying %d fixtures across DockInsights and 5 Baselines...", len(scenarios))
         opt_results = self.opt_backtester.run_scenarios(scenarios=scenarios)
 
         # 5. Compute Comparative Summary & Savings
@@ -100,15 +100,15 @@ class BacktestEngine:
         return report
 
     def _compute_comparative_summary(self, summary_by_strategy: Dict[str, Dict[str, Any]]) -> Dict[str, Any]:
-        """Calculates performance deltas between CharterAI and all baselines."""
-        charter_metrics = summary_by_strategy.get("CharterAI Decision Engine", {})
+        """Calculates performance deltas between DockInsights and all baselines."""
+        charter_metrics = summary_by_strategy.get("DockInsights Decision Engine", {})
         charter_cost = charter_metrics.get("total_cost", 1.0)
         charter_dem = charter_metrics.get("total_demurrage", 0.0)
         charter_succ = charter_metrics.get("delivery_success_rate", 100.0)
 
         comparisons = {}
         for b_name, b_metrics in summary_by_strategy.items():
-            if b_name == "CharterAI Decision Engine":
+            if b_name == "DockInsights Decision Engine":
                 continue
 
             b_cost = b_metrics.get("total_cost", charter_cost)
@@ -121,7 +121,7 @@ class BacktestEngine:
             dem_savings_pct = (dem_savings_usd / max(1.0, b_dem)) * 100.0 if b_dem > 0 else 0.0
 
             comparisons[b_name] = {
-                "charter_ai_cost": charter_cost,
+                "dock_insights_cost": charter_cost,
                 "baseline_cost": b_cost,
                 "cost_savings_usd": round(cost_savings_usd, 2),
                 "cost_savings_pct": round(cost_savings_pct, 2),
@@ -184,7 +184,7 @@ class BacktestEngine:
         comparisons = data.get("comparative_analysis", {})
 
         md = []
-        md.append("# CharterAI — Historical Walk-Forward Backtesting Report (Phase 11)")
+        md.append("# DockInsights — Historical Walk-Forward Backtesting Report (Phase 11)")
         md.append("")
         md.append(f"**Run ID:** `{meta.get('backtest_run_id')}` | **Generated At:** `{meta.get('generated_at')}`")
         md.append(f"**Test Windows:** `{meta.get('test_years')}` | **Fixtures Evaluated:** `{meta.get('scenario_count')}`")
@@ -193,7 +193,7 @@ class BacktestEngine:
         md.append("")
         md.append("## Executive Summary")
         md.append("")
-        md.append("This report documents the rigorous historical walk-forward backtest of CharterAI's end-to-end maritime chartering intelligence architecture against 5 established commercial baselines across the 2022–2024 period.")
+        md.append("This report documents the rigorous historical walk-forward backtest of DockInsights's end-to-end maritime chartering intelligence architecture against 5 established commercial baselines across the 2022–2024 period.")
         md.append("")
         md.append("### Key Findings")
         md.append("")
@@ -204,9 +204,9 @@ class BacktestEngine:
         b5_comp = comparisons.get("Baseline 5: Fixed Vessel Rule (Panamax)", {})
 
         if b1_comp:
-            md.append(f"- **Cost Efficiency vs Spot Baseline:** CharterAI achieved a **{b1_comp.get('cost_savings_pct', 0.0)}% total delivered cost reduction** (saving **${b1_comp.get('cost_savings_usd', 0.0):,.2f}**) compared to immediate spot chartering.")
+            md.append(f"- **Cost Efficiency vs Spot Baseline:** DockInsights achieved a **{b1_comp.get('cost_savings_pct', 0.0)}% total delivered cost reduction** (saving **${b1_comp.get('cost_savings_usd', 0.0):,.2f}**) compared to immediate spot chartering.")
         if b1_comp.get("demurrage_reduction_pct", 0) > 0:
-            md.append(f"- **Demurrage Liability Reduction:** CharterAI reduced port demurrage liability by **{b1_comp.get('demurrage_reduction_pct', 0.0)}%** (saving **${b1_comp.get('demurrage_savings_usd', 0.0):,.2f}**) via proactive congestion forecasting and laytime-aware parcel sizing.")
+            md.append(f"- **Demurrage Liability Reduction:** DockInsights reduced port demurrage liability by **{b1_comp.get('demurrage_reduction_pct', 0.0)}%** (saving **${b1_comp.get('demurrage_savings_usd', 0.0):,.2f}**) via proactive congestion forecasting and laytime-aware parcel sizing.")
         if b5_comp:
             md.append(f"- **Fleet Optimization vs Fixed Rule:** Optimizing vessel classes dynamically outperformed the fixed Panamax policy by **{b5_comp.get('cost_savings_pct', 0.0)}%**.")
         if b3_comp:
@@ -222,7 +222,7 @@ class BacktestEngine:
         md.append("| Model | 3-Day MAE | 7-Day MAE | 14-Day MAE | 30-Day MAE | 14-Day sMAPE |")
         md.append("| :--- | :---: | :---: | :---: | :---: | :---: |")
 
-        for m_name in ["CharterAI Ensemble", "Baseline 1: Last Rate", "Baseline 2: Moving Average"]:
+        for m_name in ["DockInsights Ensemble", "Baseline 1: Last Rate", "Baseline 2: Moving Average"]:
             h_data = f_summary.get(m_name, {})
             mae_3 = h_data.get("3d", {}).get("mae", "-")
             mae_7 = h_data.get("7d", {}).get("mae", "-")
@@ -234,10 +234,10 @@ class BacktestEngine:
         md.append("")
         md.append("### Port Congestion Prediction Performance")
         md.append("")
-        md.append("| Test Year | CharterAI MAE (days) | Historical Baseline MAE (days) | Improvement |")
+        md.append("| Test Year | DockInsights MAE (days) | Historical Baseline MAE (days) | Improvement |")
         md.append("| :---: | :---: | :---: | :---: |")
         for yr_str, c_met in c_summary.items():
-            c_mae = c_met.get("charter_ai_mae", 0.0)
+            c_mae = c_met.get("dock_insights_mae", 0.0)
             b_mae = c_met.get("baseline_hist_mean_mae", 0.0)
             imp = round(((b_mae - c_mae) / max(0.1, b_mae)) * 100.0, 1)
             md.append(f"| {yr_str} | {c_mae:.2f} d | {b_mae:.2f} d | +{imp}% |")
@@ -253,7 +253,7 @@ class BacktestEngine:
         md.append("| :--- | :---: | :---: | :---: | :---: | :---: |")
 
         for strat_name, met in opt_summary.items():
-            bold = "**" if "CharterAI" in strat_name else ""
+            bold = "**" if "DockInsights" in strat_name else ""
             tc = f"${met.get('total_cost', 0):,.0f}"
             cpt = f"${met.get('cost_per_tonne', 0):.2f}/t"
             dem = f"${met.get('total_demurrage', 0):,.0f}"
@@ -284,7 +284,7 @@ class BacktestEngine:
         md.append("| :--- | :---: | :---: | :---: | :---: | :---: |")
 
         for strat_name, met in opt_summary.items():
-            bold = "**" if "CharterAI" in strat_name else ""
+            bold = "**" if "DockInsights" in strat_name else ""
             av = f"${met.get('avoided_cost', 0):,.0f}"
             mo = f"${met.get('missed_opportunity_cost', 0):,.0f}"
             sr = f"{met.get('booking_success_rate', 0):.1f}%"

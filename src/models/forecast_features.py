@@ -1,5 +1,5 @@
 """
-Charter-AI — Freight Forecast Feature Engineering.
+DockInsights — Freight Forecast Feature Engineering.
 
 Transforms multi-domain maritime time series into ML-ready feature matrices
 for dry-bulk freight rate forecasting across horizons (3, 7, 14, 30 days).

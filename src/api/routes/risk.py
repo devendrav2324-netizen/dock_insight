@@ -1,5 +1,5 @@
 """
-Charter-AI — Risk Assessment and Simulation Endpoints (Phase 8).
+DockInsights — Risk Assessment and Simulation Endpoints (Phase 8).
 """
 
 from datetime import date

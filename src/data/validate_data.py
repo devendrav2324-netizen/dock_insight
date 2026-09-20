@@ -1,5 +1,5 @@
 """
-Data validation and provenance quality contract module for CharterAI.
+Data validation and provenance quality contract module for DockInsights.
 """
 import numpy as np
 import pandas as pd

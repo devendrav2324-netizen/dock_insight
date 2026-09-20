@@ -1,5 +1,5 @@
 """
-Charter-AI — Port Congestion & Waiting Time Predictor.
+DockInsights — Port Congestion & Waiting Time Predictor.
 
 Predicts:
 1. Expected waiting time in days

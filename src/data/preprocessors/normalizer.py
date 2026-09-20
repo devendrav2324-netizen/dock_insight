@@ -1,5 +1,5 @@
 """
-Charter-AI — Data Normalizer.
+DockInsights — Data Normalizer.
 
 Standardizes units, timestamps, and maritime entity codes.
 """

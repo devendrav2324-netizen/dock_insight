@@ -1,5 +1,5 @@
 """
-Charter-AI — Market Risk Assessor.
+DockInsights — Market Risk Assessor.
 
 Evaluates freight rate volatility, BDI trend instability, and
 coal price risk.

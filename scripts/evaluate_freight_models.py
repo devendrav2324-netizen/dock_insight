@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Charter-AI — Multi-Horizon Freight Forecasting Model Evaluation CLI.
+DockInsights — Multi-Horizon Freight Forecasting Model Evaluation CLI.
 
 Executes rigorous time-series walk-forward cross-validation across all 6 model
 families for horizons: 3 days, 7 days, 14 days, and 30 days.
@@ -64,7 +64,7 @@ def run_evaluation(
         freight_file = data_path / "freight_rates.csv"
 
     print("=" * 92)
-    print(" CharterAI V2 — Multi-Model Walk-Forward Freight Evaluation Benchmark")
+    print(" DockInsights V2 — Multi-Model Walk-Forward Freight Evaluation Benchmark")
     print(f" Route: {origin} -> {destination} | Vessel Class: {vessel_class} | Cargo: {cargo_type}")
     print(f" Horizons: {horizons} days | Validation: Chronological Walk-Forward")
     print("=" * 92)

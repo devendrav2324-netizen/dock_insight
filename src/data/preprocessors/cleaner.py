@@ -1,5 +1,5 @@
 """
-Charter-AI — Data Cleaner.
+DockInsights — Data Cleaner.
 
 Handles missing values, whitespace stripping, and column type casting.
 """

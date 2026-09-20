@@ -1,5 +1,5 @@
 """
-Charter-AI — Voyage Plan & Fleet Allocation Data Models (Phase 6).
+DockInsights — Voyage Plan & Fleet Allocation Data Models (Phase 6).
 
 Represents individual voyage legs and full multi-voyage charter plans
 supporting homogeneous fleets, mixed vessel classes, single and multiple voyages.

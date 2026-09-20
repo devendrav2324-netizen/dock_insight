@@ -1,5 +1,5 @@
 """
-Charter-AI — Voyage Economics Service (Phase 5).
+DockInsights — Voyage Economics Service (Phase 5).
 
 Calculates full voyage economics from the charterer/cargo-owner perspective,
 dynamic bunker fuel costs, port handling durations, canal/agency costs,

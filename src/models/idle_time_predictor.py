@@ -1,5 +1,5 @@
 """
-Charter-AI — Idle Time & Demurrage Risk Predictor.
+DockInsights — Idle Time & Demurrage Risk Predictor.
 
 Predicts expected vessel waiting time and demurrage risk at loading and
 discharge ports based on port congestion, berth capacity, weather conditions,

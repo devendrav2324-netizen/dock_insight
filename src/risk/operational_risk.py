@@ -1,5 +1,5 @@
 """
-Charter-AI — Operational Risk Assessor.
+DockInsights — Operational Risk Assessor.
 
 Evaluates route-specific and vessel operational risks using
 static scoring matrices.

@@ -1,5 +1,5 @@
 """
-Charter-AI — FastAPI Dependency Injection.
+DockInsights — FastAPI Dependency Injection.
 
 Provides database sessions, model instances, and service objects
 to route handlers via FastAPI's Depends() system.

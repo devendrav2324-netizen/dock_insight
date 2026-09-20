@@ -1,8 +1,8 @@
-# CharterAI V2 — Maritime Data Dictionary
+# DockInsights V2 — Maritime Data Dictionary
 
 ## 1. Overview & Data Policy
 
-This Data Dictionary defines the canonical schema, physical units, allowed ranges, and source provenance for all 12 maritime data domains in the CharterAI V2 platform.
+This Data Dictionary defines the canonical schema, physical units, allowed ranges, and source provenance for all 12 maritime data domains in the DockInsights V2 platform.
 
 ### Data Policy & Segregation
 1. **Strict Provenance**:

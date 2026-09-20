@@ -1,5 +1,5 @@
 """
-Charter-AI — Health Check Route.
+DockInsights — Health Check Route.
 """
 
 from fastapi import APIRouter

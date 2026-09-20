@@ -1,5 +1,5 @@
 """
-Charter-AI — Vessels Endpoint.
+DockInsights — Vessels Endpoint.
 """
 
 from typing import List, Optional

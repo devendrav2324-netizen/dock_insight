@@ -1,5 +1,5 @@
 """
-Charter-AI — FastAPI Application Factory.
+DockInsights — FastAPI Application Factory.
 
 Creates and configures the FastAPI app with CORS, routes, and lifespan events.
 """
@@ -32,7 +32,7 @@ async def lifespan(app: FastAPI):
     setup_logging(level=settings.log_level, fmt=settings.log_format)
 
     logger.info(
-        f"Charter-AI starting | version={settings.model_version} | "
+        f"DockInsights starting | version={settings.model_version} | "
         f"db={settings.postgres_host}:{settings.postgres_port}/{settings.postgres_db}"
     )
 
@@ -48,7 +48,7 @@ async def lifespan(app: FastAPI):
 
     yield
 
-    logger.info("Charter-AI shutting down")
+    logger.info("DockInsights shutting down")
 
 
 def create_app() -> FastAPI:
@@ -56,7 +56,7 @@ def create_app() -> FastAPI:
     settings = get_settings()
 
     app = FastAPI(
-        title="Charter-AI",
+        title="DockInsights",
         description=(
             "AI-Powered Bulk Vessel Chartering & Freight Intelligence Platform. "
             "Decision-support system for dry-bulk cargo chartering to India's East Coast ports."

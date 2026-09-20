@@ -1,5 +1,5 @@
 """
-Charter-AI — Structured Logging.
+DockInsights — Structured Logging.
 
 Configures Python logging with either JSON or human-readable format,
 controlled by the LOG_FORMAT setting.

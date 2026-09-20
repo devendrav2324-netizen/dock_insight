@@ -1,6 +1,6 @@
 # Machine Learning Methodology
 
-CharterAI employs multiple time-series forecasting techniques to predict Forward Freight Agreements (FFAs) and spot rates.
+DockInsights employs multiple time-series forecasting techniques to predict Forward Freight Agreements (FFAs) and spot rates.
 
 ## Models
 1. **Naive/Moving Average**: Serves as the baseline.

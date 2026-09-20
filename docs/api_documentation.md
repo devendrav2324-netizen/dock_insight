@@ -1,6 +1,6 @@
 # API Documentation
 
-The CharterAI backend exposes a RESTful API powered by FastAPI.
+The DockInsights backend exposes a RESTful API powered by FastAPI.
 
 ## Endpoints
 

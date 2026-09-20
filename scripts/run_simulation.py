@@ -1,5 +1,5 @@
 """
-Charter-AI — Chronological Backtesting & Simulation Framework
+DockInsights — Chronological Backtesting & Simulation Framework
 Compares a static Baseline Strategy vs the AI-Assisted Strategy.
 """
 
@@ -69,7 +69,7 @@ def simulate_baseline_voyage(cargo_qty: float, origin: str, dest: str, mock_frei
 def run_chronological_simulation(num_steps: int = 12):
     """
     Simulates consecutive historical/future months of chartering.
-    Compares Baseline vs CharterAI.
+    Compares Baseline vs DockInsights.
     """
     engine = DecisionEngine()
     
@@ -81,7 +81,7 @@ def run_chronological_simulation(num_steps: int = 12):
     ai_contracts_hybrid = 0
     ai_contracts_term = 0
     
-    print(f"--- Starting CharterAI Chronological Simulation ({num_steps} iterations) ---")
+    print(f"--- Starting DockInsights Chronological Simulation ({num_steps} iterations) ---")
     
     for i in range(num_steps):
         # [DEMO/SYNTHETIC] Data Generation for backtest
@@ -158,16 +158,16 @@ def run_chronological_simulation(num_steps: int = 12):
 
 ## 2. Strategy Definitions
 - **Baseline Strategy**: Always selects a Panamax vessel. If cargo exceeds capacity, splits into multiple voyages. Always uses spot contracts. Ignorant of dynamic demurrage/port risk.
-- **AI-Assisted Strategy (CharterAI)**: Actively utilizes the Decision Engine to optimize vessel class (e.g., jumping to Capesize for large loads), dynamically calculates risk, and optimizes contract strategy based on market forecasts.
+- **AI-Assisted Strategy (DockInsights)**: Actively utilizes the Decision Engine to optimize vessel class (e.g., jumping to Capesize for large loads), dynamically calculates risk, and optimizes contract strategy based on market forecasts.
 
 ## 3. Results
 - **Baseline Total Cost**: ${baseline_total_cost:,.2f}
-- **CharterAI Total Cost**: ${ai_total_cost:,.2f}
+- **DockInsights Total Cost**: ${ai_total_cost:,.2f}
 - **Net Savings**: ${savings:,.2f} ({savings_pct:.2f}%)
 
 ### Contract Strategy Comparison
 - **Baseline**: {baseline_contracts_spot} Spot Contracts
-- **CharterAI**: {ai_contracts_spot} Spot, {ai_contracts_hybrid} Hybrid, {ai_contracts_term} Term
+- **DockInsights**: {ai_contracts_spot} Spot, {ai_contracts_hybrid} Hybrid, {ai_contracts_term} Term
 
 ### Analysis
 The AI successfully generated savings primarily by:

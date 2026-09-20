@@ -1,5 +1,5 @@
 """
-Charter-AI — Comprehensive Test Suite for Phase 3 REAL Freight Forecasting Engine.
+DockInsights — Comprehensive Test Suite for Phase 3 REAL Freight Forecasting Engine.
 
 Tests:
 1. Multi-domain feature engineering (lags, rolling stats, momentum, indices, commodities, bunker, macro, operational, calendar)

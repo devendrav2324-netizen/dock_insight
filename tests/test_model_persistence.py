@@ -1,5 +1,5 @@
 """
-Charter-AI — Problem 7 Model Persistence, Versioning & Reproducibility Tests.
+DockInsights — Problem 7 Model Persistence, Versioning & Reproducibility Tests.
 
 Verifies:
 1. Model artifact persistence and reproducible inference without retraining.

@@ -1,5 +1,5 @@
 """
-Charter-AI — Feature Engineering.
+DockInsights — Feature Engineering.
 
 Transforms raw time-series data into ML-ready features.
 All feature logic is centralized here so that training, inference,

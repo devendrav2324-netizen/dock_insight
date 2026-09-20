@@ -1,5 +1,5 @@
 """
-Data preprocessing module for CharterAI.
+Data preprocessing module for DockInsights.
 """
 import pandas as pd
 from typing import Dict, List

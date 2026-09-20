@@ -1,5 +1,5 @@
 """
-Charter-AI — Central Unified Decision Engine (Phase 10).
+DockInsights — Central Unified Decision Engine (Phase 10).
 
 Orchestrates the end-to-end maritime chartering intelligence architecture:
     Cargo Request
@@ -155,7 +155,7 @@ class DecisionEngineInputs:
 
 class DecisionEngine:
     """
-    Central orchestration layer executing the end-to-end CharterAI decision pipeline.
+    Central orchestration layer executing the end-to-end DockInsights decision pipeline.
     Eliminates all hardcoded values by delegating to specialized services.
     """
 

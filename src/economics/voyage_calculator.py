@@ -1,5 +1,5 @@
 """
-Charter-AI — Voyage Economics Calculator.
+DockInsights — Voyage Economics Calculator.
 
 Full voyage P&L estimation combining freight cost, bunker fuel,
 port charges, insurance, and demurrage exposure.

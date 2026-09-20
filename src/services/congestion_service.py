@@ -1,5 +1,5 @@
 """
-Charter-AI — Congestion & Idle Time Service.
+DockInsights — Congestion & Idle Time Service.
 
 Wraps the CongestionPredictor and IdleTimePredictor models to serve
 port waiting times, delay probabilities, and demurrage exposure to:

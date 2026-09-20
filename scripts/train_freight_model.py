@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Charter-AI — Freight Forecasting Model Training CLI.
+DockInsights — Freight Forecasting Model Training CLI.
 
 Trains and persists dry-bulk freight forecasting models under models/
 with rigorous walk-forward cross-validation and JSON metadata.
@@ -19,7 +19,7 @@ from datetime import datetime, timezone
 import pandas as pd
 import numpy as np
 
-# Ensure charter-ai root is in sys.path
+# Ensure dock-insights root is in sys.path
 root_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(root_dir))
 
@@ -70,7 +70,7 @@ def train_and_persist(
         freight_file = data_path / "freight_rates.csv"
 
     print("=" * 80)
-    print(f" CharterAI V2 — Freight Model Training Engine")
+    print(f" DockInsights V2 — Freight Model Training Engine")
     print(f" Route: {origin} -> {destination} | Vessel: {vessel_class} | Cargo: {cargo_type}")
     print(f" Dataset: {freight_file} | Model: {model_choice.upper()} | Version: {version}")
     print("=" * 80)
@@ -184,7 +184,7 @@ def train_and_persist(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Train CharterAI Freight Forecasting Models")
+    parser = argparse.ArgumentParser(description="Train DockInsights Freight Forecasting Models")
     parser.add_argument("--origin", type=str, default=None, help="Origin port code, e.g. AUS_NEW")
     parser.add_argument("--destination", type=str, default=None, help="Destination port code, e.g. IND_GVM")
     parser.add_argument("--route", type=str, default="AUS_NEW_IND_GVM", help="Route format AUS_NEW_IND_GVM")

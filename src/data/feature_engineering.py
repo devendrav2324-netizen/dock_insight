@@ -1,5 +1,5 @@
 """
-Feature engineering module for CharterAI freight forecasting.
+Feature engineering module for DockInsights freight forecasting.
 Provides reusable functions to create time-series features while avoiding data leakage.
 """
 import pandas as pd

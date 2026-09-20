@@ -1,5 +1,5 @@
 """
-Charter-AI — Phase 5 Realistic Voyage Economics Unit & Integration Tests.
+DockInsights — Phase 5 Realistic Voyage Economics Unit & Integration Tests.
 
 Validates all 9 cost components, dynamic sailing and port handling durations,
 contractual laytime and demurrage exposure modeling, delivery probability,

@@ -1,5 +1,5 @@
 """
-Charter-AI — Contract Optimization Endpoint (Phase 9).
+DockInsights — Contract Optimization Endpoint (Phase 9).
 """
 
 from fastapi import APIRouter

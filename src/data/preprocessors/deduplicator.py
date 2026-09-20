@@ -1,5 +1,5 @@
 """
-Charter-AI — Data Deduplicator.
+DockInsights — Data Deduplicator.
 
 Detects, logs, and resolves duplicate rows across composite business keys.
 """

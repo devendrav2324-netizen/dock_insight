@@ -1,8 +1,8 @@
-# CharterAI V2 Architecture
+# DockInsights V2 Architecture
 
 ## System Overview
 
-CharterAI is built on a clean, layered architecture separating HTTP routing, high-level orchestration, modular services, and low-level ML/Optimization algorithms.
+DockInsights is built on a clean, layered architecture separating HTTP routing, high-level orchestration, modular services, and low-level ML/Optimization algorithms.
 
 ```ascii
                       +-----------------------------+

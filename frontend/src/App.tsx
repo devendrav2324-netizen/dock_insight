@@ -37,7 +37,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="sidebar-header">
           <div className="sidebar-logo">
             <Ship className="logo-icon" size={24} />
-            CharterAI
+            DockInsights
           </div>
         </div>
         <nav className="sidebar-nav">
@@ -61,7 +61,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="main-content">
         <header className="top-header">
           <div className="page-title">
-            {navItems.find(item => item.path === location.pathname)?.name || 'CharterAI'}
+            {navItems.find(item => item.path === location.pathname)?.name || 'DockInsights'}
           </div>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', color: 'var(--text-secondary)' }}>
             <Search size={20} />
@@ -92,7 +92,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<div><h2>Dashboard Overview</h2><p style={{marginTop: '1rem', color: 'var(--text-secondary)'}}>Welcome to CharterAI. Select Voyage Planner to begin.</p></div>} />
+          <Route path="/" element={<div><h2>Dashboard Overview</h2><p style={{marginTop: '1rem', color: 'var(--text-secondary)'}}>Welcome to DockInsights. Select Voyage Planner to begin.</p></div>} />
           <Route path="/voyage-planner" element={<VoyagePlanner />} />
           <Route path="/forecast" element={<div>Forecast Module</div>} />
           <Route path="/optimizer" element={<div>Optimizer Module</div>} />

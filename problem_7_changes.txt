@@ -1,5 +1,5 @@
 ================================================================================
-CHARTERAI - PROBLEM 7 SUMMARY OF CHANGES
+DOCKINSIGHTS - PROBLEM 7 SUMMARY OF CHANGES
 Model Persistence, Versioning & Reproducible Inference
 ================================================================================
 

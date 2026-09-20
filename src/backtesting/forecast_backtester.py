@@ -1,5 +1,5 @@
 """
-Charter-AI — Forecast Walk-Forward Backtester (Phase 11).
+DockInsights — Forecast Walk-Forward Backtester (Phase 11).
 
 Executes strictly leak-free chronological walk-forward evaluations of:
 1. Freight rate forecasts (Ensemble vs Baseline 1: Last Rate vs Baseline 2: Moving Average)
@@ -133,7 +133,7 @@ class ForecastBacktester:
                 if len(train_data) < 30 or len(test_data) < 30:
                     continue
 
-                # Fit CharterAI Ensemble on historical training slice
+                # Fit DockInsights Ensemble on historical training slice
                 ensemble = EnsembleForecaster()
                 try:
                     ensemble.fit(df_train=train_data, target_col="freight_rate", date_col="date")
@@ -171,7 +171,7 @@ class ForecastBacktester:
                         # Baseline 2: Simple Moving Average (7-day)
                         pred_sma = sma_rate
 
-                        # CharterAI Ensemble Prediction
+                        # DockInsights Ensemble Prediction
                         try:
                             res = ensemble.predict(
                                 horizon_days=h,
@@ -198,7 +198,7 @@ class ForecastBacktester:
                         m_sma = compute_forecast_metrics(y_trues, y_preds_sma)
 
                         for m_name, m_dict in [
-                            ("CharterAI Ensemble", m_charter),
+                            ("DockInsights Ensemble", m_charter),
                             ("Baseline 1: Last Rate", m_naive),
                             ("Baseline 2: Moving Average", m_sma),
                         ]:
@@ -268,7 +268,7 @@ class ForecastBacktester:
                     hist_mean_errors.append(abs(actual_wait - pred_baseline))
 
             results[str(test_yr)] = {
-                "charter_ai_mae": round(float(np.mean(charter_errors)), 2) if charter_errors else 0.0,
+                "dock_insights_mae": round(float(np.mean(charter_errors)), 2) if charter_errors else 0.0,
                 "baseline_hist_mean_mae": round(float(np.mean(hist_mean_errors)), 2) if hist_mean_errors else 0.0,
             }
 

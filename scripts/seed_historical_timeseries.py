@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Charter-AI — Realistic Multi-Year Historical Maritime Time-Series Generator.
+DockInsights — Realistic Multi-Year Historical Maritime Time-Series Generator.
 
 Generates 2+ years (736 days, 2024-01-01 to 2026-01-05) of continuous,
 physically coherent time-series for:

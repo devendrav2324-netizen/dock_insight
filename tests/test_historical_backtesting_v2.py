@@ -1,12 +1,12 @@
 """
-Charter-AI — Test Suite for Phase 11 Historical Backtesting Framework.
+DockInsights — Test Suite for Phase 11 Historical Backtesting Framework.
 
 Tests:
 1. Metric calculations (forecast, optimization, market timing, contract strategy)
 2. Scenario generation and date ordering
 3. Strict walk-forward split integrity & absence of future leakage
 4. Forecast walk-forward evaluation across models and horizons
-5. Optimization backtester evaluation across CharterAI and all 5 Baselines
+5. Optimization backtester evaluation across DockInsights and all 5 Baselines
 6. End-to-end BacktestEngine execution, comparative metrics, and artifact export
 """
 
@@ -168,11 +168,11 @@ def test_forecast_backtester_evaluation():
     res = fb.evaluate_walk_forward_splits(splits=splits, horizons=[3, 7], routes=routes)
     assert "freight_summary_by_model" in res
     assert "congestion_summary" in res
-    assert "CharterAI Ensemble" in res["freight_summary_by_model"]
+    assert "DockInsights Ensemble" in res["freight_summary_by_model"]
     assert "Baseline 1: Last Rate" in res["freight_summary_by_model"]
 
     # Verify metrics exist for evaluated horizons
-    charter_metrics = res["freight_summary_by_model"]["CharterAI Ensemble"]
+    charter_metrics = res["freight_summary_by_model"]["DockInsights Ensemble"]
     assert "3d" in charter_metrics
     assert charter_metrics["3d"]["mae"] > 0.0
 
@@ -216,7 +216,7 @@ def test_optimization_backtester_all_5_baselines():
     summary = res["summary_by_strategy"]
 
     expected_strategies = [
-        "CharterAI Decision Engine",
+        "DockInsights Decision Engine",
         "Baseline 1: Current Freight Rate",
         "Baseline 2: Moving Average",
         "Baseline 3: Always Largest Vessel",
@@ -260,8 +260,8 @@ def test_backtest_engine_end_to_end_and_reports(tmp_path):
     # Verify Markdown contains executive summary and tables
     with open(paths["markdown"]) as f:
         md_text = f.read()
-        assert "# CharterAI — Historical Walk-Forward Backtesting Report" in md_text
-        assert "CharterAI Decision Engine" in md_text
+        assert "# DockInsights — Historical Walk-Forward Backtesting Report" in md_text
+        assert "DockInsights Decision Engine" in md_text
         assert "Baseline 1: Current Freight Rate" in md_text
         assert "Baseline 3: Always Largest Vessel" in md_text
         assert "Baseline 5: Fixed Vessel Rule (Panamax)" in md_text

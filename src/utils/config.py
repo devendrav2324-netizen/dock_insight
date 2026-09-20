@@ -1,5 +1,5 @@
 """
-Charter-AI — Application Configuration.
+DockInsights — Application Configuration.
 
 Loads settings from environment variables / .env file using Pydantic BaseSettings.
 All configuration is centralized here to avoid scattered os.getenv() calls.
@@ -13,7 +13,7 @@ from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-# Project root = charter-ai/
+# Project root = dock-insights/
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 
@@ -30,8 +30,8 @@ class Settings(BaseSettings):
     # ---------- Database ----------
     postgres_host: str = "localhost"
     postgres_port: int = 5432
-    postgres_db: str = "charter_ai"
-    postgres_user: str = "charter_ai"
+    postgres_db: str = "dock_insights"
+    postgres_user: str = "dock_insights"
     postgres_password: str = "changeme_in_production"
     database_url: str | None = None  # Override full URL if needed
 

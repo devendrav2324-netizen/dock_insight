@@ -1,5 +1,5 @@
 """
-Charter-AI — Robust CSV Loader.
+DockInsights — Robust CSV Loader.
 
 Handles comments (e.g. # SYNTHETIC_DEMO_DATA), whitespace, encodings,
 and column sanitization.

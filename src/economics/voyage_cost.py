@@ -1,5 +1,5 @@
 """
-Charter-AI — Realistic Voyage Economics Engine (Phase 5).
+DockInsights — Realistic Voyage Economics Engine (Phase 5).
 
 A comprehensive, transparent, formula-based economics engine designed
 specifically from the CHARTERER / CARGO-OWNER perspective.

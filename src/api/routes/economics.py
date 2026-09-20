@@ -1,5 +1,5 @@
 """
-Charter-AI — Voyage Economics Endpoints (Phase 5).
+DockInsights — Voyage Economics Endpoints (Phase 5).
 
 Provides delivered cost calculations from the charterer/cargo-owner perspective,
 dynamic congestion-driven demurrage exposure, itemized cost breakdowns,

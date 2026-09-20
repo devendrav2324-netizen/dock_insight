@@ -1,5 +1,5 @@
 """
-Charter-AI — Problem 6A Hardcoded Decision Inputs & Verification Tests.
+DockInsights — Problem 6A Hardcoded Decision Inputs & Verification Tests.
 
 Verifies:
 1. No duplicate production vessel specification dictionaries exist outside vessel_repository.py.

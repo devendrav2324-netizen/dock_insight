@@ -1,5 +1,5 @@
 """
-Charter-AI — Baseline Forecasters.
+DockInsights — Baseline Forecasters.
 
 Provides 3 statistical baselines:
 1. Naive Baseline: Carries the last observed rate forward into the future.

@@ -1,6 +1,6 @@
 # System Architecture
 
-CharterAI is built on a modular, decoupled architecture consisting of independent micro-engines orchestrated by a central Decision Engine.
+DockInsights is built on a modular, decoupled architecture consisting of independent micro-engines orchestrated by a central Decision Engine.
 
 ## High-Level Data Flow
 1. **Frontend (React/Vite)**: The user submits cargo parameters via the professional dashboard.

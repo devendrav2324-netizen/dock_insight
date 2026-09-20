@@ -1,5 +1,5 @@
 """
-Charter-AI — Canonical Forecasting Interface.
+DockInsights — Canonical Forecasting Interface.
 
 Single source of truth for all forecast data structures and the
 ForecastModel abstract base class. All forecasters (Baseline, ARIMA,

@@ -1,5 +1,5 @@
 """
-Charter-AI — Geospatial Utilities.
+DockInsights — Geospatial Utilities.
 
 Great-circle distance, sailing distance estimation, and bearing calculations
 for maritime routing.

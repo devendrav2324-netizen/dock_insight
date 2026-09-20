@@ -1,5 +1,5 @@
 """
-Charter-AI — Backtesting Framework (Phase 11).
+DockInsights — Backtesting Framework (Phase 11).
 
 Provides rigorous, leak-free walk-forward historical validation across:
 - Time-series freight and port congestion forecasting

@@ -1,6 +1,6 @@
 # Evaluation Methodology
 
-_Charter-AI — Task 2: Walk-Forward Out-of-Sample Validation_
+_DockInsights — Task 2: Walk-Forward Out-of-Sample Validation_
 
 ---
 

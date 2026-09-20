@@ -1,5 +1,5 @@
 """
-Charter-AI — Central Vessel Specifications & Availability Repository.
+DockInsights — Central Vessel Specifications & Availability Repository.
 
 Single source of truth for vessel class specifications, technical parameters,
 demurrage benchmarks, and dynamic vessel availability calculations.

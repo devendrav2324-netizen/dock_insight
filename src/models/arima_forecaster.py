@@ -1,5 +1,5 @@
 """
-Charter-AI — ARIMA & SARIMA Freight Forecaster.
+DockInsights — ARIMA & SARIMA Freight Forecaster.
 
 Statistical time-series models for dry-bulk freight rates.
 Provides native parametric prediction intervals (P10, P50, P90)

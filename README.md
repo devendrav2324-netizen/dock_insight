@@ -1,4 +1,4 @@
-# CharterAI 🚢
+# DockInsights 🚢
 
 An AI-Powered Bulk Vessel Chartering & Freight Intelligence Platform built for the Smart India Hackathon.
 
@@ -8,7 +8,7 @@ An AI-Powered Bulk Vessel Chartering & Freight Intelligence Platform built for t
 Maritime freight chartering, especially for dry bulk cargo on the Indian East Coast, relies heavily on fragmented, manual decision-making. Logistics managers struggle to optimize vessel class selection against complex port constraints, unpredictable freight markets, and severe demurrage risks, resulting in inefficient spot-charter dependencies and inflated voyage costs.
 
 ## 2. Proposed Solution
-**CharterAI** is a comprehensive, centralized decision-support orchestration engine. It ingests cargo requirements and dynamically evaluates time-series freight forecasts, port physical limitations (Draft/LOA), and maritime risks to recommend the optimal vessel class and contract strategy (Spot vs. Term).
+**DockInsights** is a comprehensive, centralized decision-support orchestration engine. It ingests cargo requirements and dynamically evaluates time-series freight forecasts, port physical limitations (Draft/LOA), and maritime risks to recommend the optimal vessel class and contract strategy (Spot vs. Term).
 
 ## 3. System Architecture
 The platform utilizes a decoupled micro-engine architecture. A central **Decision Engine** acts as the orchestrator, passing data sequentially through six independent modules (Forecast, Vessel, Port, Economics, Risk, Contract). For a deeper dive, read [architecture.md](docs/architecture.md).
@@ -19,7 +19,7 @@ The platform utilizes a decoupled micro-engine architecture. A central **Decisio
 - **Infrastructure**: Docker, Docker Compose, Pytest.
 
 ## 5. Data Pipeline
-CharterAI utilizes a strict validation boundary using Pydantic. Synthetic/Mock data (enabled via `SIH_DEMO_MODE`) is explicitly partitioned into `src/data/mock_db.py` to prevent data leakage into the core optimization logic. See [data_dictionary.md](docs/data_dictionary.md).
+DockInsights utilizes a strict validation boundary using Pydantic. Synthetic/Mock data (enabled via `SIH_DEMO_MODE`) is explicitly partitioned into `src/data/mock_db.py` to prevent data leakage into the core optimization logic. See [data_dictionary.md](docs/data_dictionary.md).
 
 ## 6. ML Methodology
 The Forecasting Engine leverages a hybrid approach:
@@ -50,8 +50,8 @@ A sleek, professional React dashboard built for logistics managers. It visualize
 
 ## 14. Installation
 ```bash
-git clone https://github.com/your-org/charter-ai.git
-cd charter-ai
+git clone https://github.com/your-org/dock-insights.git
+cd dock-insights
 cp .env.example .env
 ```
 

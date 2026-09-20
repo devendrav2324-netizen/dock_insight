@@ -1,6 +1,6 @@
 # Assumptions
 
-To calculate voyage economics and risk profiles without paid live data feeds, CharterAI makes the following mathematical assumptions:
+To calculate voyage economics and risk profiles without paid live data feeds, DockInsights makes the following mathematical assumptions:
 
 1. **Linear Port Costs**: Synthetic port loading/discharging fees scale linearly with the size of the vessel class.
 2. **Static Bunker Pricing**: Fuel prices (VLSFO/MGO) are assumed static unless overridden by the user.

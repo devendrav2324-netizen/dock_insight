@@ -1,4 +1,4 @@
-# CharterAI — Project Audit V2
+# DockInsights — Project Audit V2
 
 > **Audit Date**: 2026-09-10
 > **Auditor**: Automated deep-inspection of full codebase
@@ -11,7 +11,7 @@
 ## 1. Current Architecture
 
 ```
-charter-ai/
+dock-insights/
 ├── src/
 │   ├── api/                  # FastAPI application layer
 │   │   ├── main.py           # App factory, CORS, router registration
@@ -378,7 +378,7 @@ Only 3 of 11 endpoints are fully functional. The `/analyze-voyage` endpoint bypa
 
 ---
 
-## 15. Recommended Migration Path to CharterAI V2
+## 15. Recommended Migration Path to DockInsights V2
 
 ### Phase 1: Foundation (Consolidation)
 - Eliminate duplicate forecasting ABCs — adopt `base_forecaster.py` as canonical

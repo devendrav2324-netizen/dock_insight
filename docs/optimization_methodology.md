@@ -1,6 +1,6 @@
 # Optimization & Decision Methodology
 
-CharterAI uses a transparent, data-driven multi-criteria decision and optimization methodology.
+DockInsights uses a transparent, data-driven multi-criteria decision and optimization methodology.
 
 ## 1. Market Momentum Calculation
 Market momentum is computed deterministically from actual historical freight observations and forecast rate trajectories rather than artificial hardcoded values (`+2.0`/`-2.0`).

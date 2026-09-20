@@ -1,5 +1,5 @@
 """
-Charter-AI — Pydantic Response Serializers.
+DockInsights — Pydantic Response Serializers.
 
 API response models used by FastAPI for automatic OpenAPI documentation
 and response validation.

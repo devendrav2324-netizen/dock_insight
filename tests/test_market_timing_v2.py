@@ -1,5 +1,5 @@
 """
-Charter-AI — Market Timing Engine Unit & Integration Tests (Phase 7).
+DockInsights — Market Timing Engine Unit & Integration Tests (Phase 7).
 
 Validates:
 1. Rising market scenario (expected rate increase -> BOOK_NOW or START_NEGOTIATION)

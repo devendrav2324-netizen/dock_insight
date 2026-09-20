@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Charter-AI — Port Congestion & Waiting Time Model Training CLI.
+DockInsights — Port Congestion & Waiting Time Model Training CLI.
 
 Trains Queuing Baseline, Moving Average, and XGBoost Quantile Regression models
 using chronological time-series cross-validation (no random splits).
@@ -84,7 +84,7 @@ def train_congestion(data_dir: str = "data/processed", output_dir: str = "models
         weather_file = d_path / "weather.csv"
 
     print("=" * 80)
-    print(" CharterAI V2 — Port Congestion Model Training Engine")
+    print(" DockInsights V2 — Port Congestion Model Training Engine")
     print(f" Dataset: {cong_file} | Weather: {weather_file} | Version: {version}")
     print("=" * 80)
 
@@ -142,7 +142,7 @@ def train_congestion(data_dir: str = "data/processed", output_dir: str = "models
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Train CharterAI Port Congestion Model")
+    parser = argparse.ArgumentParser(description="Train DockInsights Port Congestion Model")
     parser.add_argument("--data-dir", type=str, default="data/processed")
     parser.add_argument("--output-dir", type=str, default="models/congestion")
     parser.add_argument("--version", type=str, default="1.0.0")

@@ -1,5 +1,5 @@
 """
-Charter-AI — Candidate Plan Generator (Phase 6).
+DockInsights — Candidate Plan Generator (Phase 6).
 
 Generates candidate fleet allocation plans for dry bulk cargo shipments.
 Produces both homogeneous vessel configurations (1xCapesize, 2xPanamax,

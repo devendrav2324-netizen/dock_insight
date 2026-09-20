@@ -1,5 +1,5 @@
 """
-Charter-AI — Probabilistic Monte Carlo Simulation Engine (Phase 8).
+DockInsights — Probabilistic Monte Carlo Simulation Engine (Phase 8).
 
 Simulates high-dimensional maritime uncertainty across:
 1. Freight rate volatility (Log-normal distribution)

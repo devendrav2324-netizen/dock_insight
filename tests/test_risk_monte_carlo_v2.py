@@ -1,5 +1,5 @@
 """
-Charter-AI — Phase 8 Comprehensive Tests: Probabilistic Risk and Scenario Engine.
+DockInsights — Phase 8 Comprehensive Tests: Probabilistic Risk and Scenario Engine.
 
 Validates:
 1. 8 Service-driven risk categories in MaritimeRiskEngine

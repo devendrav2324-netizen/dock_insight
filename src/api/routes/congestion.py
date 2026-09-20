@@ -1,5 +1,5 @@
 """
-Charter-AI — Port Congestion & Idle Time Prediction Endpoints.
+DockInsights — Port Congestion & Idle Time Prediction Endpoints.
 
 Returns expected vessel waiting time in days, P10/P50/P90 quantile intervals,
 delay probabilities, and congestion level for loading and discharge ports.

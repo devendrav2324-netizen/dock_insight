@@ -1,5 +1,5 @@
 """
-Charter-AI — XGBoost Freight Forecaster with Probabilistic Quantile Uncertainty.
+DockInsights — XGBoost Freight Forecaster with Probabilistic Quantile Uncertainty.
 
 Implements multi-step freight rate forecasting using XGBoost with:
 1. Multi-domain feature matrix (freight lags, rolling stats, momentum,

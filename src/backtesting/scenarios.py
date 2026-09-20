@@ -1,5 +1,5 @@
 """
-Charter-AI — Historical Tender Scenarios (Phase 11).
+DockInsights — Historical Tender Scenarios (Phase 11).
 
 Defines standardized, reproducible dry-bulk cargo shipment fixtures across
 historical evaluation windows (2022, 2023, 2024).

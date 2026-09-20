@@ -1,5 +1,5 @@
 """
-CharterAI Services Layer.
+DockInsights Services Layer.
 
 Encapsulates business logic, ML models, and optimization engines.
 """

@@ -1,5 +1,5 @@
 """
-Tests for CharterAI V2 Data Layer (Phase 2).
+Tests for DockInsights V2 Data Layer (Phase 2).
 
 Validates loaders, schema validators, business validators, preprocessors,
 and normalized data models.

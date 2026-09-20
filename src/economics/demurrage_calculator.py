@@ -1,5 +1,5 @@
 """
-Charter-AI — Demurrage Cost Calculator.
+DockInsights — Demurrage Cost Calculator.
 
 Estimates demurrage exposure based on predicted idle time,
 contractual laytime, and demurrage rate.

@@ -1,5 +1,5 @@
 """
-Data loading module for CharterAI.
+Data loading module for DockInsights.
 """
 import os
 import pandas as pd

@@ -1,5 +1,5 @@
 """
-Charter-AI — Comprehensive Test Suite for Phase 4 Port Congestion & Idle-Time Prediction.
+DockInsights — Comprehensive Test Suite for Phase 4 Port Congestion & Idle-Time Prediction.
 
 Tests:
 1. CongestionFeatureBuilder (historical rolling stats, calendar, weather, port specs)

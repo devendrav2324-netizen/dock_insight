@@ -1,6 +1,6 @@
 # Limitations
 
-While the CharterAI Decision Engine successfully orchestrates complex rules-based logic and optimizes constraints, it is important to critically understand its limitations:
+While the DockInsights Decision Engine successfully orchestrates complex rules-based logic and optimizes constraints, it is important to critically understand its limitations:
 
 ## 1. Forecasting Limitations (XGBoost/ARIMA)
 - **Black Swan Vulnerability**: The underlying time-series models assume historical variance predicts future variance. They cannot predict sudden geopolitical events (e.g., canal closures).

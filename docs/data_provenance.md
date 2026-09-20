@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-CharterAI requires full transparency regarding data origin, quality, and execution mode across all system layers. This document details the data provenance architecture, dataset inventory, synthetic generator specifications, data quality contract, and machine-readable metadata propagation.
+DockInsights requires full transparency regarding data origin, quality, and execution mode across all system layers. This document details the data provenance architecture, dataset inventory, synthetic generator specifications, data quality contract, and machine-readable metadata propagation.
 
 ---
 
@@ -29,7 +29,7 @@ All demonstration datasets in `data/demo/` are programmatically generated and ex
 
 ## 3. Provenance Controlled Vocabulary
 
-CharterAI uses controlled enums (`src/data/provenance.py`) to categorize datasets:
+DockInsights uses controlled enums (`src/data/provenance.py`) to categorize datasets:
 
 - **`DataMode`**:
   - `SYNTHETIC_DEMO`: Programmatically generated or mock data for architecture validation and SIH demonstration.
@@ -96,4 +96,4 @@ Provenance metadata propagates seamlessly through all layers:
 
 ## 7. SIH Presentation Safety Statement
 
-> *"The current demonstration environment uses clearly labeled synthetic datasets to validate CharterAI's forecasting, optimization, and risk architecture; the production architecture is designed to accept verified external maritime and market data."*
+> *"The current demonstration environment uses clearly labeled synthetic datasets to validate DockInsights's forecasting, optimization, and risk architecture; the production architecture is designed to accept verified external maritime and market data."*

@@ -1,5 +1,5 @@
 """
-Charter-AI — Risk Service (Phase 8 Upgrade).
+DockInsights — Risk Service (Phase 8 Upgrade).
 
 Ties together:
 1. MaritimeRiskEngine (8 service-driven risk categories)

@@ -1,5 +1,5 @@
 """
-Charter-AI — Phase 9 Comprehensive Tests: Risk-Aware Contract Optimization.
+DockInsights — Phase 9 Comprehensive Tests: Risk-Aware Contract Optimization.
 
 Validates:
 1. All 7 contract strategies evaluated (100% SPOT, 100% SHORT_TERM, 100% MEDIUM_TERM,

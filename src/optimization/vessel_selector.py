@@ -1,5 +1,5 @@
 """
-Charter-AI — Vessel-Port Compatibility Selector.
+DockInsights — Vessel-Port Compatibility Selector.
 
 Deterministic constraint-based filtering: given an origin, destination,
 and cargo tonnage, returns the set of vessel classes that can physically

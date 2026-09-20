@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Charter-AI — Historical Walk-Forward Backtesting CLI (Phase 11).
+DockInsights — Historical Walk-Forward Backtesting CLI (Phase 11).
 
 Executes comprehensive historical walk-forward backtesting across expanding
 historical windows (2019-2021 -> 2022, 2019-2022 -> 2023, 2019-2023 -> 2024).
 
-Rigorously benchmarks CharterAI against 5 commercial baselines:
+Rigorously benchmarks DockInsights against 5 commercial baselines:
 1. Baseline 1: Current / Last Freight Rate
 2. Baseline 2: Simple Moving Average
 3. Baseline 3: Always Choose Largest Feasible Vessel
@@ -39,7 +39,7 @@ logger = get_logger(__name__)
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="CharterAI Historical Walk-Forward Backtesting Engine"
+        description="DockInsights Historical Walk-Forward Backtesting Engine"
     )
     parser.add_argument(
         "--years",
@@ -82,7 +82,7 @@ def print_terminal_summary(report: dict):
     f_summary = report.get("forecast_evaluation", {}).get("freight_summary_by_model", {})
 
     print("\n" + "=" * 96)
-    print(" CharterAI — Historical Walk-Forward Backtest Results")
+    print(" DockInsights — Historical Walk-Forward Backtest Results")
     print(f" Test Windows: {meta.get('test_years')} | Total Historical Fixtures: {meta.get('scenario_count')}")
     print("=" * 96)
 
@@ -90,7 +90,7 @@ def print_terminal_summary(report: dict):
     print("\n--- 1. Multi-Horizon Forecast Accuracy (MAE in $/t) ---")
     print(f"{'Model':<32} {'3-Day':<12} {'7-Day':<12} {'14-Day':<12} {'30-Day':<12} {'14-Day sMAPE'}")
     print("-" * 96)
-    for m in ["CharterAI Ensemble", "Baseline 1: Last Rate", "Baseline 2: Moving Average"]:
+    for m in ["DockInsights Ensemble", "Baseline 1: Last Rate", "Baseline 2: Moving Average"]:
         h_data = f_summary.get(m, {})
         mae_3 = f"${h_data.get('3d', {}).get('mae', 0):.2f}"
         mae_7 = f"${h_data.get('7d', {}).get('mae', 0):.2f}"
@@ -112,7 +112,7 @@ def print_terminal_summary(report: dict):
         print(f"{s_name:<40} {tc:<16} {cpt:<10} {dem:<14} {delay:<10} {succ}")
 
     # 3. Savings vs Baselines
-    print("\n--- 3. CharterAI Performance Advantage vs Baselines ---")
+    print("\n--- 3. DockInsights Performance Advantage vs Baselines ---")
     print(f"{'Comparison':<40} {'Cost Savings ($)':<20} {'Cost Red. %':<14} {'Demurrage Saved':<18}")
     print("-" * 96)
     for b_name, c in comp.items():

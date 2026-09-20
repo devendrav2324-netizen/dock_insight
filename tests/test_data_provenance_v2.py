@@ -1,5 +1,5 @@
 """
-Charter-AI — Problem 8 Data Provenance & Quality Contract Tests.
+DockInsights — Problem 8 Data Provenance & Quality Contract Tests.
 
 Tests:
 1. Synthetic datasets are labeled SYNTHETIC_DEMO, not VERIFIED_EXTERNAL.

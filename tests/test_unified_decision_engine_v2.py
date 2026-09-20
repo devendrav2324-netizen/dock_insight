@@ -1,5 +1,5 @@
 """
-Charter-AI — Unified Decision Engine Test Suite (Phase 10).
+DockInsights — Unified Decision Engine Test Suite (Phase 10).
 
 Verifies the central orchestration layer connecting all 10 phases:
 - Data validation and geospatial routing

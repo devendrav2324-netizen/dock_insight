@@ -1,5 +1,5 @@
 """
-Charter-AI — Port Risk Assessor.
+DockInsights — Port Risk Assessor.
 
 Evaluates congestion severity, berth availability, and turnaround risk
 at destination ports.

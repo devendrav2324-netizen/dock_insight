@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Charter-AI — Maritime Data Validation CLI Script.
+DockInsights — Maritime Data Validation CLI Script.
 
 Validates datasets against business rules, physical constraints, and schemas:
 1. Missing required fields
@@ -78,7 +78,7 @@ def validate_single_file(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="CharterAI Maritime Data Validator")
+    parser = argparse.ArgumentParser(description="DockInsights Maritime Data Validator")
     parser.add_argument("--dir", type=str, default="data/demo", help="Directory containing CSV datasets to validate")
     parser.add_argument("--file", type=str, default=None, help="Specific CSV file to validate")
     args = parser.parse_args()
@@ -105,7 +105,7 @@ def main():
         sys.exit(0)
 
     print("=" * 80)
-    print(f" CharterAI V2 Maritime Data Quality & Integrity Validation")
+    print(f" DockInsights V2 Maritime Data Quality & Integrity Validation")
     print(f" Target: {args.file or args.dir} ({len(files_to_validate)} datasets)")
     print("=" * 80)
 

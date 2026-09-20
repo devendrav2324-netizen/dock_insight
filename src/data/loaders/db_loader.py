@@ -1,5 +1,5 @@
 """
-Charter-AI — Database Loader.
+DockInsights — Database Loader.
 
 Loads validated DataFrames into SQL database tables using SQLAlchemy ORM.
 Supports transactional execution, bulk insertions, and upserts.

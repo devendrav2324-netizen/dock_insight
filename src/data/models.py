@@ -1,5 +1,5 @@
 """
-Charter-AI — Normalized SQLAlchemy ORM Models (V2).
+DockInsights — Normalized SQLAlchemy ORM Models (V2).
 
 Normalized schema architecture supporting historical and current maritime data across 12 domains:
 1. Ports

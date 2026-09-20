@@ -1,8 +1,8 @@
 """
-Charter-AI — Optimization & Strategy Backtester (Phase 11).
+DockInsights — Optimization & Strategy Backtester (Phase 11).
 
 Replays historical tender fixtures against ground-truth market realizations,
-rigorously comparing the CharterAI Decision Engine against 5 commercial baselines:
+rigorously comparing the DockInsights Decision Engine against 5 commercial baselines:
 - Baseline 1: Current/last freight rate (immediate spot booking)
 - Baseline 2: Simple moving average (SMA trend booking)
 - Baseline 3: Always choose largest feasible vessel (Capesize prioritization)
@@ -102,11 +102,11 @@ class OptimizationBacktester:
         scenarios: List[BacktestScenario],
     ) -> Dict[str, Any]:
         """
-        Replays all scenarios across CharterAI and the 5 baselines.
+        Replays all scenarios across DockInsights and the 5 baselines.
         Returns execution records and comparative performance summaries.
         """
         results_by_strategy: Dict[str, List[ScenarioExecutionResult]] = {
-            "CharterAI Decision Engine": [],
+            "DockInsights Decision Engine": [],
             "Baseline 1: Current Freight Rate": [],
             "Baseline 2: Moving Average": [],
             "Baseline 3: Always Largest Vessel": [],
@@ -115,9 +115,9 @@ class OptimizationBacktester:
         }
 
         for scen in scenarios:
-            # 1. CharterAI Decision
-            res_charter = self._simulate_charter_ai(scen)
-            results_by_strategy["CharterAI Decision Engine"].append(res_charter)
+            # 1. DockInsights Decision
+            res_charter = self._simulate_dock_insights(scen)
+            results_by_strategy["DockInsights Decision Engine"].append(res_charter)
 
             # 2. Baseline 1: Current / Last Freight Rate
             res_b1 = self._simulate_baseline_1_last_rate(scen)
@@ -274,8 +274,8 @@ class OptimizationBacktester:
     # Strategy Simulators
     # -------------------------------------------------------------------------
 
-    def _simulate_charter_ai(self, scen: BacktestScenario) -> ScenarioExecutionResult:
-        """CharterAI: Executes end-to-end DecisionEngine at order date."""
+    def _simulate_dock_insights(self, scen: BacktestScenario) -> ScenarioExecutionResult:
+        """DockInsights: Executes end-to-end DecisionEngine at order date."""
         inputs = DecisionEngineInputs(
             cargo_type=scen.cargo_type,
             cargo_quantity_t=scen.cargo_quantity_t,
@@ -313,7 +313,7 @@ class OptimizationBacktester:
         return ScenarioExecutionResult(
             scenario_id=scen.scenario_id,
             year=scen.year,
-            strategy_name="CharterAI Decision Engine",
+            strategy_name="DockInsights Decision Engine",
             vessel_class=v_class,
             vessels_count=rec_plan.get("vessel_count", 1),
             voyages_count=rec_plan.get("voyages", 1),

@@ -1,4 +1,4 @@
-# CharterAI — Migration Plan (V1 → V2)
+# DockInsights — Migration Plan (V1 → V2)
 
 > **Created**: 2026-09-10
 > **Scope**: Every planned change classified as KEEP / MODIFY / REPLACE / NEW

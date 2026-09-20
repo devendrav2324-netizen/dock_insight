@@ -1,5 +1,5 @@
 """
-Charter-AI — Contract Optimization Service (Phase 9 Upgrade).
+DockInsights — Contract Optimization Service (Phase 9 Upgrade).
 
 Wraps ContractOptimizer and RiskAwareContractOptimizer.
 """

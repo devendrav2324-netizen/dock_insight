@@ -1,5 +1,5 @@
 """
-Charter-AI — Backtesting Evaluation Metrics (Phase 11).
+DockInsights — Backtesting Evaluation Metrics (Phase 11).
 
 Provides standardized, objective metric calculations across four operational domains:
 1. Time-Series Forecasting: MAE, RMSE, sMAPE, Directional Accuracy

@@ -1,5 +1,5 @@
 """
-Charter-AI — Multi-Voyage Vessel & Fleet Optimization Engine (Phase 6).
+DockInsights — Multi-Voyage Vessel & Fleet Optimization Engine (Phase 6).
 
 Compares complete charter plans (e.g. 1xCapesize vs 2xPanamax vs 2xSupramax vs 3xHandysize)
 instead of simplistic cargo-to-vessel mappings.

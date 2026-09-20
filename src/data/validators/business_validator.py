@@ -1,5 +1,5 @@
 """
-Charter-AI — Business Rule Validator.
+DockInsights — Business Rule Validator.
 
 Domain-specific integrity validation:
 1. Missing required fields

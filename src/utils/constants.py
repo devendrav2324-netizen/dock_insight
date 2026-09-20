@@ -1,5 +1,5 @@
 """
-Charter-AI — Business Constants & Enumerations.
+DockInsights — Business Constants & Enumerations.
 
 Centralized enums and constants used across all modules.
 """

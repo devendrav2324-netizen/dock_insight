@@ -1,5 +1,5 @@
 """
-Charter-AI — Bunker Fuel Cost Estimator.
+DockInsights — Bunker Fuel Cost Estimator.
 
 Estimates fuel consumption and cost for a voyage based on vessel class,
 distance, and current VLSFO price.

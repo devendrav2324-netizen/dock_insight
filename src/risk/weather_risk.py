@@ -1,5 +1,5 @@
 """
-Charter-AI — Weather Risk Assessor.
+DockInsights — Weather Risk Assessor.
 
 Evaluates cyclone exposure, monsoon disruption, and sea-state warnings
 for East Coast Indian ports.

@@ -1,5 +1,5 @@
 """
-Charter-AI — Port-Specific Cost Models.
+DockInsights — Port-Specific Cost Models.
 
 Configurable lookup tables for port charges, pilotage, towage,
 berth hire, and stevedoring rates.

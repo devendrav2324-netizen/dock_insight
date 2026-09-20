@@ -1,5 +1,5 @@
 """
-Charter-AI — Model Registry.
+DockInsights — Model Registry.
 
 Tracks trained model versions, their metrics, and artifacts.
 Enables reproducibility, metadata validation, and safe model rollback.

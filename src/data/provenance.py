@@ -1,5 +1,5 @@
 """
-Charter-AI — Central Data Provenance & Dataset Registry (V2).
+DockInsights — Central Data Provenance & Dataset Registry (V2).
 
 Explicit, machine-readable provenance tracking for all maritime datasets, ML models,
 and decision pipeline outputs. Defines controlled vocabulary and metadata registries.

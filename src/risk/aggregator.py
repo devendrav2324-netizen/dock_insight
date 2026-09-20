@@ -1,5 +1,5 @@
 """
-Charter-AI — Risk Aggregator.
+DockInsights — Risk Aggregator.
 
 Combines market, port, weather, and operational risk scores into
 a composite risk assessment with dimension breakdown.

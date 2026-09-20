@@ -1,5 +1,5 @@
 """
-Charter-AI — Normalized Data Access Repository (V2).
+DockInsights — Normalized Data Access Repository (V2).
 
 All database queries are centralized here behind an async repository interface.
 Supports all 12 normalized domain entities.

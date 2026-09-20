@@ -1,5 +1,5 @@
 """
-Charter-AI — Model Evaluation & Time-Series Walk-Forward Cross-Validation.
+DockInsights — Model Evaluation & Time-Series Walk-Forward Cross-Validation.
 
 Provides:
 1. Standard Error Metrics: MAE, RMSE, MAPE, sMAPE, MASE

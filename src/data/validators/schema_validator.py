@@ -1,5 +1,5 @@
 """
-Charter-AI — Schema Validator.
+DockInsights — Schema Validator.
 
 Validates tabular datasets against Pydantic model schemas.
 Produces detailed field-level error diagnostics.

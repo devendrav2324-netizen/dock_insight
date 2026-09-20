@@ -1,5 +1,5 @@
 """
-Charter-AI — Model Training Orchestration.
+DockInsights — Model Training Orchestration.
 
 Handles cross-validation, hyperparameter tuning, OOS evaluation metrics,
 and coordination of the training and model registry persistence pipeline.

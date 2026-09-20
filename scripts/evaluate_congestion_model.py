@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Charter-AI — Port Congestion Model Evaluation & Benchmark CLI.
+DockInsights — Port Congestion Model Evaluation & Benchmark CLI.
 
 Evaluates and compares:
 1. Queuing Theory (M/M/c) Baseline
@@ -41,7 +41,7 @@ def evaluate_congestion(data_dir: str = "data/processed"):
         weather_file = d_path / "weather.csv"
 
     print("=" * 86)
-    print(" CharterAI V2 — Port Congestion & Waiting Time Model Evaluation Benchmark")
+    print(" DockInsights V2 — Port Congestion & Waiting Time Model Evaluation Benchmark")
     print(f" Dataset: {cong_file} | Weather: {weather_file}")
     print("=" * 86)
 
@@ -121,7 +121,7 @@ def evaluate_congestion(data_dir: str = "data/processed"):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate CharterAI Port Congestion Models")
+    parser = argparse.ArgumentParser(description="Evaluate DockInsights Port Congestion Models")
     parser.add_argument("--data-dir", type=str, default="data/processed")
     args = parser.parse_args()
     evaluate_congestion(data_dir=args.data_dir)

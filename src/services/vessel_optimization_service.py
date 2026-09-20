@@ -1,5 +1,5 @@
 """
-Charter-AI — Vessel & Fleet Optimization Service (Phase 6).
+DockInsights — Vessel & Fleet Optimization Service (Phase 6).
 
 Coordinates deterministic vessel selection, constraint validation,
 and multi-voyage fleet charter plan optimization.

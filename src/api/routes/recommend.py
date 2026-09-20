@@ -1,5 +1,5 @@
 """
-Charter-AI — Unified Recommendation & Decision Endpoint (Phase 10).
+DockInsights — Unified Recommendation & Decision Endpoint (Phase 10).
 
 The central decision-support endpoint: orchestrates vessel selection,
 probabilistic forecasting, port congestion predictions, market timing,

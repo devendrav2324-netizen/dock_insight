@@ -1,5 +1,5 @@
 """
-Charter-AI — Freight Forecast Endpoints.
+DockInsights — Freight Forecast Endpoints.
 
 Returns real statistical and machine-learning freight rate forecasts
 for a given route, vessel class, cargo type, and horizon.

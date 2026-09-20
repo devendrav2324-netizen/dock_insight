@@ -1,5 +1,5 @@
 """
-Charter-AI — Multi-Criteria Soft Objective Scoring Engine (Phase 6).
+DockInsights — Multi-Criteria Soft Objective Scoring Engine (Phase 6).
 
 Evaluates candidate charter plans across multiple soft objectives:
 1. Delivered cost per tonne ($/MT)

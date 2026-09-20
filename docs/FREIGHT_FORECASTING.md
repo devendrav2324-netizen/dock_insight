@@ -1,8 +1,8 @@
-# CharterAI Freight Forecasting Engine — Technical Specification & User Manual
+# DockInsights Freight Forecasting Engine — Technical Specification & User Manual
 
 ## 1. Executive Summary
 
-CharterAI Phase 3 implements an end-to-end, mathematically defensible **Dry-Bulk Freight Forecasting Engine** tailored for Indian East Coast import and export corridors.
+DockInsights Phase 3 implements an end-to-end, mathematically defensible **Dry-Bulk Freight Forecasting Engine** tailored for Indian East Coast import and export corridors.
 
 The engine forecasts spot freight rates (in USD/tonne) across specific dry-bulk commercial dimensions:
 $$\text{origin} \longrightarrow \text{destination} \longrightarrow \text{vessel\_class} \longrightarrow \text{cargo\_type}$$
@@ -16,7 +16,7 @@ across four standardized commercial horizons:
 
 ## 2. Model Architecture & Families
 
-CharterAI deploys **six model families**, balancing simple baselines, parametric statistical time-series models, gradient-boosted decision trees, and multi-model ensembles:
+DockInsights deploys **six model families**, balancing simple baselines, parametric statistical time-series models, gradient-boosted decision trees, and multi-model ensembles:
 
 | Model ID | Family | Mathematical Formulation | Prediction Interval Method |
 | :--- | :--- | :--- | :--- |
@@ -39,7 +39,7 @@ CharterAI deploys **six model families**, balancing simple baselines, parametric
 Random sampling across time series violates temporal ordering, destroys autocorrelation, and causes catastrophic **forward look-ahead leakage** (training on future information to predict the past).
 
 ### Walk-Forward Cross-Validation Protocol
-CharterAI enforces expanding chronological walk-forward validation:
+DockInsights enforces expanding chronological walk-forward validation:
 
 ```
 Fold 0: [=== Train Window (Day 0 to 180) ===] -> [ Test (Day 181 to 187) ]
@@ -99,7 +99,7 @@ Features are engineered by `FreightFeatureBuilder` in `src/models/forecast_featu
 
 ## 6. Uncertainty Quantification & Quantile Forecasting
 
-CharterAI strictly prohibits arbitrary heuristics (such as `np.std(history) * 0.1`). All prediction intervals are statistically defensible:
+DockInsights strictly prohibits arbitrary heuristics (such as `np.std(history) * 0.1`). All prediction intervals are statistically defensible:
 
 ### XGBoost Quantile Regression
 Trained using `objective="reg:quantileerror"`:

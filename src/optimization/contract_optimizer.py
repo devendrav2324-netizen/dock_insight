@@ -1,5 +1,5 @@
 """
-Charter-AI — Risk-Aware Contract Strategy Optimization Engine (Phase 9).
+DockInsights — Risk-Aware Contract Strategy Optimization Engine (Phase 9).
 
 Determines the optimal quantitative allocation across:
 1. 100% SPOT

@@ -1,5 +1,5 @@
 """
-Charter-AI — Freight Forecast Service.
+DockInsights — Freight Forecast Service.
 
 Wraps the underlying FreightForecaster ML/statistical engine to serve
 live freight rate forecasts, uncertainty intervals, and metrics.

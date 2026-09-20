@@ -1,5 +1,5 @@
 """
-Charter-AI — Maritime Risk Engine (Phase 8 Upgrade)
+DockInsights — Maritime Risk Engine (Phase 8 Upgrade)
 
 Comprehensive service-driven risk engine evaluating transparent risk scores
 across 8 core maritime risk categories:

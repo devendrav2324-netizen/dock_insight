@@ -1,5 +1,5 @@
 # =============================================================================
-# Charter-AI — Docker Compose
+# DockInsights — Docker Compose
 # =============================================================================
 # Usage:
 #   docker compose up -d          # start all services
@@ -10,18 +10,18 @@ services:
   # ---------- PostgreSQL + PostGIS ----------
   postgres:
     image: postgis/postgis:16-3.4
-    container_name: charter-ai-db
+    container_name: dock-insights-db
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-charter_ai}
-      POSTGRES_USER: ${POSTGRES_USER:-charter_ai}
+      POSTGRES_DB: ${POSTGRES_DB:-dock_insights}
+      POSTGRES_USER: ${POSTGRES_USER:-dock_insights}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme_in_production}
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-charter_ai}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-dock_insights}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -31,7 +31,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.backend
-    container_name: charter-ai-backend
+    container_name: dock-insights-backend
     restart: unless-stopped
     env_file: .env
     environment:
@@ -51,7 +51,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: charter-ai-frontend
+    container_name: dock-insights-frontend
     restart: unless-stopped
     ports:
       - "5173:5173"

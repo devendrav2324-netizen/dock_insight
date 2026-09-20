@@ -1,5 +1,5 @@
 """
-Charter-AI — Multi-Voyage Vessel & Fleet Optimization Tests (Phase 6).
+DockInsights — Multi-Voyage Vessel & Fleet Optimization Tests (Phase 6).
 
 Validates:
 1. Complete charter plan generation (1xCapesize, 2xPanamax, 2xSupramax, 3xHandysize, mixed)

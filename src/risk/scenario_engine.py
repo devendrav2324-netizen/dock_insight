@@ -1,5 +1,5 @@
 """
-Charter-AI — Deterministic Scenario Stress-Testing Engine (Phase 8).
+DockInsights — Deterministic Scenario Stress-Testing Engine (Phase 8).
 
 Evaluates candidate charter plans across three standardized market and operational scenarios:
 1. BEST_CASE: Favorable freight rates (P10), low bunker prices (P10), minimal port congestion,

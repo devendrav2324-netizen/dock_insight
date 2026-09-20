@@ -1,5 +1,5 @@
 """
-Charter-AI — Freight Forecaster Engine & Pipeline Orchestrator.
+DockInsights — Freight Forecaster Engine & Pipeline Orchestrator.
 
 Provides the end-to-end forecasting pipeline for dry-bulk freight rates across:
   origin -> destination -> vessel_class -> cargo_type

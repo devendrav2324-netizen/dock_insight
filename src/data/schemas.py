@@ -1,5 +1,5 @@
 """
-Charter-AI — Normalized Pydantic Data Schemas (V2).
+DockInsights — Normalized Pydantic Data Schemas (V2).
 
 Validation schemas for ingested datasets, loaders, and API boundaries.
 Supports canonical attributes and legacy aliases via ConfigDict(populate_by_name=True).

@@ -1,5 +1,5 @@
 """
-Charter-AI — Database Engine & Session Management.
+DockInsights — Database Engine & Session Management.
 
 Provides both async (for FastAPI) and sync (for scripts/ingestion) engines.
 """
