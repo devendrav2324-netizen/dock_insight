@@ -1,6 +1,6 @@
 """
 DockInsights — Chronological Backtesting & Simulation Framework
-Compares a static Baseline Strategy vs the AI-Assisted Strategy.
+Compares a static Baseline Strategy vs the DockInsights Strategy.
 """
 
 import random
@@ -97,8 +97,8 @@ def run_chronological_simulation(num_steps: int = 12):
         baseline_total_cost += base_cost
         baseline_contracts_spot += 1 # Baseline always books spot
         
-        # 2. AI Run
-        # The AI uses the decision engine which optimally picks vessel (Capesize if >100k) 
+        # 2. Engine Run
+        # The engine uses the decision engine which optimally picks vessel (Capesize if >100k) 
         # and mitigates risk/demurrage (using its internal synthetic models for this demo)
         from datetime import datetime
         ai_inputs = DecisionEngineInputs(
@@ -116,7 +116,7 @@ def run_chronological_simulation(num_steps: int = 12):
         ai_res = engine.evaluate(ai_inputs)
         if ai_res["status"] == "ERROR":
             print(f"Iter {i+1} failed: {ai_res.get('error_message')}")
-            # If AI fails (e.g. constraints impossible), we fallback to baseline cost
+            # If engine fails (e.g. constraints impossible), we fallback to baseline cost
             ai_total_cost += base_cost
             ai_contracts_spot += 1
             continue
@@ -124,7 +124,7 @@ def run_chronological_simulation(num_steps: int = 12):
         ai_cost = ai_res["voyage_economics"]["total_cost"]
         ai_total_cost += ai_cost
         
-        # Record AI strategy
+        # Record engine strategy
         strategy = ai_res["contract_strategy"]["recommended_strategy"]
         if strategy == "SPOT":
             ai_contracts_spot += 1
@@ -133,20 +133,20 @@ def run_chronological_simulation(num_steps: int = 12):
         else:
             ai_contracts_term += 1
             
-        print(f"Iter {i+1} | Cargo: {cargo:,.0f}t | Base Cost: ${base_cost:,.0f} | AI Cost: ${ai_cost:,.0f} | AI Strat: {strategy}")
+        print(f"Iter {i+1} | Cargo: {cargo:,.0f}t | Base Cost: ${base_cost:,.0f} | Engine Cost: ${ai_cost:,.0f} | Engine Strat: {strategy}")
         
     print("\n--- Simulation Results ---")
     print(f"Baseline Total Cost: ${baseline_total_cost:,.0f}")
-    print(f"AI Total Cost:       ${ai_total_cost:,.0f}")
+    print(f"Engine Total Cost:       ${ai_total_cost:,.0f}")
     
     savings = baseline_total_cost - ai_total_cost
     savings_pct = (savings / baseline_total_cost) * 100
-    print(f"AI Savings:          ${savings:,.0f} ({savings_pct:.2f}%)")
+    print(f"Engine Savings:          ${savings:,.0f} ({savings_pct:.2f}%)")
     print(f"Baseline Contracts:  Spot: {baseline_contracts_spot}")
-    print(f"AI Contracts:        Spot: {ai_contracts_spot} | Hybrid: {ai_contracts_hybrid} | Term: {ai_contracts_term}")
+    print(f"Engine Contracts:        Spot: {ai_contracts_spot} | Hybrid: {ai_contracts_hybrid} | Term: {ai_contracts_term}")
     
     # Save a markdown report programmatically
-    report = f"""# Validation Report: AI vs Baseline Strategy
+    report = f"""# Validation Report: DockInsights Analytics vs Baseline Strategy
 
 > [!NOTE]
 > This simulation uses chronological backtesting with synthetic randomized freight/bunker data to evaluate the core architecture.
@@ -158,7 +158,7 @@ def run_chronological_simulation(num_steps: int = 12):
 
 ## 2. Strategy Definitions
 - **Baseline Strategy**: Always selects a Panamax vessel. If cargo exceeds capacity, splits into multiple voyages. Always uses spot contracts. Ignorant of dynamic demurrage/port risk.
-- **AI-Assisted Strategy (DockInsights)**: Actively utilizes the Decision Engine to optimize vessel class (e.g., jumping to Capesize for large loads), dynamically calculates risk, and optimizes contract strategy based on market forecasts.
+- **DockInsights Analytics Strategy**: Actively utilizes the Decision Engine to optimize vessel class (e.g., jumping to Capesize for large loads), dynamically calculates risk, and optimizes contract strategy based on market forecasts.
 
 ## 3. Results
 - **Baseline Total Cost**: ${baseline_total_cost:,.2f}
@@ -170,7 +170,7 @@ def run_chronological_simulation(num_steps: int = 12):
 - **DockInsights**: {ai_contracts_spot} Spot, {ai_contracts_hybrid} Hybrid, {ai_contracts_term} Term
 
 ### Analysis
-The AI successfully generated savings primarily by:
+The engine successfully generated savings primarily by:
 1. Optimizing vessel size (reducing multiple Panamax voyages into a single Capesize when constraints allowed).
 2. Proactively adjusting the contract strategy based on the built-in time-series forecasting engine.
 """

@@ -99,7 +99,7 @@ class VesselSelectionResponse(BaseModel):
 
 
 # =============================================================================
-# Explainable AI (XAI) Schemas
+# Decision Explanation Schemas
 # =============================================================================
 class AlternativeExplanation(BaseModel):
     vessel_class: str

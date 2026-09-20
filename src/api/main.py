@@ -58,7 +58,7 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title="DockInsights",
         description=(
-            "AI-Powered Bulk Vessel Chartering & Freight Intelligence Platform. "
+            "Advanced Bulk Vessel Chartering & Freight Intelligence Platform. "
             "Decision-support system for dry-bulk cargo chartering to India's East Coast ports."
         ),
         version=settings.model_version,

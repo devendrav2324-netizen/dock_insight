@@ -53,7 +53,7 @@ All **60 unit and integration tests** now pass cleanly without errors.
   - Preserved modular risk assessors: `MarketRiskAssessor`, `PortRiskAssessor`, `WeatherRiskAssessor`, `OperationalRiskAssessor`, and `RiskAggregator`.
   - Wrapped both deterministic and synthetic flows through `RiskService`.
 
-### Task 8: Decision Engine Orchestration & Explainability (XAI)
+### Task 8: Decision Engine Orchestration & Explainability
 - Updated `DecisionEngine` (`src/optimization/decision_engine.py`) to consume the canonical services via dependency injection.
 - Ensures the full pipeline runs end-to-end:
   1. Freight Rate Forecasting
@@ -61,7 +61,7 @@ All **60 unit and integration tests** now pass cleanly without errors.
   3. Voyage Cost Economics
   4. Maritime Risk Assessment
   5. Contract Strategy Recommendation
-  6. Explainability Report (XAI) with transparent "Why" factors and alternatives rejected.
+  6. Explainability Report with transparent "Why" factors and alternatives rejected.
 
 ### Task 9: Comprehensive Test Suite Validation
 - Executed `pytest`:

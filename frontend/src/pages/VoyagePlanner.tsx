@@ -248,11 +248,11 @@ export default function VoyagePlanner() {
             </div>
           </div>
 
-          {/* AI Explanation Center (XAI) */}
+          {/* Decision Explanation Center */}
           {result.explanation && (
             <div className="card" style={{ borderLeft: '4px solid var(--accent-primary)', backgroundColor: 'rgba(49, 130, 206, 0.02)' }}>
               <div className="card-header" style={{ marginBottom: '1.5rem' }}>
-                <h3 className="card-title" style={{ color: 'var(--accent-primary)' }}><BrainCircuit size={20} /> AI Explanation Center</h3>
+                <h3 className="card-title" style={{ color: 'var(--accent-primary)' }}><BrainCircuit size={20} /> Decision Explanation Center</h3>
               </div>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

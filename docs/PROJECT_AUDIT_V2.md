@@ -413,4 +413,4 @@ Only 3 of 11 endpoints are fully functional. The `/analyze-voyage` endpoint bypa
 - Add authentication/authorization
 - Add rate limiting
 - Implement recommendation logging
-- Add SHAP-based feature importance to XAI
+- Add feature importance to explainability report

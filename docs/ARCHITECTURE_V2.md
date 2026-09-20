@@ -16,7 +16,7 @@ DockInsights is built on a clean, layered architecture separating HTTP routing, 
                                     |
 +-----------------------------------v-----------------------------------+
 |                        Decision Engine                                |
-|  (Orchestrates calls to services, aggregates results, builds XAI)     |
+|  (Orchestrates calls to services, aggregates results, builds explanation report)     |
 +-----------------------------------+-----------------------------------+
                                     |
 +-----------------------------------v-----------------------------------+
@@ -51,7 +51,7 @@ DockInsights is built on a clean, layered architecture separating HTTP routing, 
 - The brain of the application.
 - Receives a parsed `DecisionEngineInputs` object.
 - Calls the 5 core services in sequence: Forecast -> Vessel Optimization -> Voyage Economics -> Risk -> Contract Strategy.
-- Constructs the final `ExplainabilityReport` (XAI).
+- Constructs the final `ExplainabilityReport`.
 
 ### 3. Service Layer (`src/services/`)
 - Encapsulates complex ML models and rule engines into simple interfaces.

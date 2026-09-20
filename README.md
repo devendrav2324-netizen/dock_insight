@@ -1,6 +1,6 @@
 # DockInsights 🚢
 
-An AI-Powered Bulk Vessel Chartering & Freight Intelligence Platform built for the Smart India Hackathon.
+An Advanced Bulk Vessel Chartering & Freight Intelligence Platform built for the Smart India Hackathon.
 
 ---
 
