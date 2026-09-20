@@ -143,6 +143,17 @@ class FreightForecaster:
         if len(filtered) >= MIN_OBS_FALLBACK:
             return DataScope(df=filtered, level="ROUTE_FAMILY", n_obs=len(filtered), data_quality="LOW")
 
+        # LEVEL 5: Vessel Class Fallback across all routes
+        mask_vc = (df["vessel_class"].str.lower() == vessel_class.lower())
+        filtered = df[mask_vc].sort_values("date").reset_index(drop=True)
+        if len(filtered) >= MIN_OBS_FALLBACK:
+            return DataScope(df=filtered, level="VESSEL_CLASS_GLOBAL", n_obs=len(filtered), data_quality="LOW")
+
+        # LEVEL 6: Global Freight Market Fallback
+        filtered = df.sort_values("date").reset_index(drop=True)
+        if len(filtered) > 0:
+            return DataScope(df=filtered, level="GLOBAL_MARKET", n_obs=len(filtered), data_quality="LOW")
+
         # INSUFFICIENT
         return DataScope(df=pd.DataFrame(), level="INSUFFICIENT", n_obs=0, data_quality="INSUFFICIENT")
 

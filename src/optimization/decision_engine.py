@@ -240,6 +240,8 @@ class DecisionEngine:
             forecast_dict = {
                 "forecast_rate_usd": forecast_rate,
                 "current_rate_usd": current_rate,
+                "current_rate": current_rate,
+                "predicted_rate": forecast_rate,
                 "direction": forecast_trend_str,
                 "confidence": forecast_confidence,
                 "uncertainty": "LOW" if forecast_confidence > 0.80 else ("HIGH" if forecast_confidence < 0.65 else "MODERATE"),
@@ -536,6 +538,7 @@ class DecisionEngine:
                 "p90_cost": risk_aware_rec.p90_cost,
                 "flexibility_score": risk_aware_rec.flexibility_score,
                 "reasons": risk_aware_rec.reasons,
+                "reasoning": risk_aware_rec.reasons,
             }
 
             canonical_economics = {
